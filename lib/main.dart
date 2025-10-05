@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/login.dart';
+import 'package:flutter_application_1/pages/dashboard/dashboard.dart';
+import 'package:flutter_application_1/theme/app_theme.dart';
 
 void main() {
   runApp(MyApp());
 }
-
-final ThemeData theme = ThemeData(
-  primaryColor: const Color(0xffffca42),
-  scaffoldBackgroundColor: const Color(0xffffffff),
-  fontFamily: 'Poppins',
-);
 
 // The 'Root' widget of the application
 class MyApp extends StatelessWidget {
@@ -19,6 +14,10 @@ class MyApp extends StatelessWidget {
   // Override the build method to describe how to display the widget
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: LoginPage(), theme: ThemeData());
+    return MaterialApp(
+      home: Dashboard(),
+      // Using a custom theme defined in app_theme.dart
+      theme: AppTheme.lightTheme,
+    );
   }
 }

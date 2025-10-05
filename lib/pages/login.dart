@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/common-widgets/buttons/primary_button.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -36,30 +37,16 @@ class LoginPage extends StatelessWidget {
                 ],
               ),
             ),
-            TextButton(
+            PrimaryButton(
               onPressed: () {
                 print('Login!');
               },
-              style: TextButton.styleFrom(
-                backgroundColor: Color(0xffffc942),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                  side: BorderSide(color: Color(0xff050315), width: 2),
-                ),
-              ),
               child: Text('Login'),
             ),
-            TextButton(
+            PrimaryButton(
               onPressed: () {
                 print('Signup!');
               },
-              style: TextButton.styleFrom(
-                backgroundColor: Color(0xffffffff),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                  side: BorderSide(color: Color(0xff050315), width: 2),
-                ),
-              ),
               child: Text('Signup'),
             ),
           ],
